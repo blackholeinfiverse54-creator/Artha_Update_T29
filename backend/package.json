@@ -68,6 +68,13 @@
     "verify:hash-chain": "node scripts/verify-hash-chain.js",
     "test:connections": "node test-connections.js",
     "test:redis": "node test-redis.js",
+    "proof:runtime": "node scripts/runtime-validation.js",
+    "proof:failure": "node scripts/failure-verification.js",
+    "proof:e2e": "node scripts/e2e-operational-proof.js",
+    "proof:replay": "node scripts/replay-provenance.js",
+    "proof:production": "node scripts/production-audit.js",
+    "proof:handover": "node scripts/final-handover.js",
+    "proof:all": "npm run proof:runtime && npm run proof:failure && npm run proof:e2e && npm run proof:replay && npm run proof:production && npm run proof:handover",
     "prepare": "node -e \"try { require('husky').install() } catch (e) {if (e.code !== 'MODULE_NOT_FOUND') throw e}\""
   },
   "dependencies": {
